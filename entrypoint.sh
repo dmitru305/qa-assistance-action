@@ -10,4 +10,4 @@ ls -la /github/workspace
 #echo "Current path: $PWD"
 #echo "Reading config from: $FULL_PATH"
 #
-#cat "$FULL_PATH"
+cat "$FULL_PATH"
