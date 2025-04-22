@@ -3,6 +3,7 @@
 CONFIG_PATH="$1"
 FULL_PATH="${CONFIG_PATH}"
 
+echo "Current path: $PWD"
 echo "Reading config from: $FULL_PATH"
 
 if [ -f "$FULL_PATH" ]; then
