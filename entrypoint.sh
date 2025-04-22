@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 CONFIG_PATH="$1"
-FULL_PATH="/github/workspace/${CONFIG_PATH}"
+FULL_PATH="${CONFIG_PATH}"
 
 echo "Reading config from: $FULL_PATH"
 
