@@ -1,17 +1,23 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: "Run QA Assistant"
+description: "Custom action using a private DockerHub image"
+
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  key:
+    description: 'model key access'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  input-file:
+    description: 'path to input file'
+    required: true
+    default: 'pom.xml'
+  output-file:
+    description: 'path to output file'
+    required: true
+    default: 'qa.json'
+
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "docker://jacobsonius/qa-assistant:latest"
   args:
-    - ${{ inputs.config-path }}
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.key }}
+    - ${{ inputs.input-file }}
+    - ${{ inputs.output-file }}
