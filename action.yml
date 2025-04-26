@@ -9,11 +9,11 @@ inputs:
     description: 'qa action'
     required: true
     default: 'INDEX'
-  input-file:
+  input-dir:
     description: 'path to input files'
     required: true
     default: './'
-  output-file:
+  output-fir:
     description: 'path to output files'
     required: true
     default: './'
