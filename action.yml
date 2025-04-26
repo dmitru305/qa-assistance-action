@@ -13,7 +13,7 @@ inputs:
     description: 'path to input files'
     required: true
     default: './'
-  output-fir:
+  output-dir:
     description: 'path to output files'
     required: true
     default: './'
