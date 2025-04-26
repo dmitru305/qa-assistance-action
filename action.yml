@@ -23,6 +23,6 @@ runs:
   image: "docker://jacobsonius/qa-assistant:latest"
   args:
     - ${{ inputs.key }}
-    - ${{ inputs.action }}
+    - ${{ inputs.action-name }}
     - ${{ inputs.input-dir }}
     - ${{ inputs.output-dir }}
