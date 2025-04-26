@@ -5,19 +5,24 @@ inputs:
   key:
     description: 'model key access'
     required: true
+  action-name:
+    description: 'qa action'
+    required: true
+    default: 'INDEX'
   input-file:
-    description: 'path to input file'
+    description: 'path to input files'
     required: true
-    default: 'pom.xml'
+    default: './'
   output-file:
-    description: 'path to output file'
+    description: 'path to output files'
     required: true
-    default: 'qa.json'
+    default: './'
 
 runs:
   using: "docker"
   image: "docker://jacobsonius/qa-assistant:latest"
   args:
     - ${{ inputs.key }}
-    - ${{ inputs.input-file }}
-    - ${{ inputs.output-file }}
+    - ${{ inputs.action }}
+    - ${{ inputs.input-dir }}
+    - ${{ inputs.output-dir }}
