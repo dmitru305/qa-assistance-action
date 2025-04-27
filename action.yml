@@ -11,15 +11,15 @@ inputs:
     default: 'INDEX' # INDEX/PLAN/JUNIT
   target-value:
     description: 'Target value in percent'
-    required: false
+    required: true
     default: '80'
   test-report-dir:
     description: 'path to report files'
-    required: false
+    required: true
     default: './target/surefire-reports/*.xml'
   coverage-report-dir:
     description: 'path to report files'
-    required: false
+    required: true
     default: './target/site/jacoco/index.html'
   input-dir:
     description: 'path to input files'
