@@ -3,12 +3,24 @@ description: "Custom action using a private DockerHub image"
 
 inputs:
   key:
-    description: 'model key access'
+    description: 'model access key'
     required: true
   action-name:
     description: 'qa action'
     required: true
-    default: 'INDEX'
+    default: 'INDEX' # INDEX/PLAN/JUNIT
+  target-value:
+    description: 'Target value in percent'
+    required: false
+    default: '80'
+  test-report-dir:
+    description: 'path to report files'
+    required: false
+    default: './target/surefire-reports/*.xml'
+  coverage-report-dir:
+    description: 'path to report files'
+    required: false
+    default: './target/site/jacoco/index.html'
   input-dir:
     description: 'path to input files'
     required: true
@@ -24,5 +36,8 @@ runs:
   args:
     - ${{ inputs.key }}
     - ${{ inputs.action-name }}
+    - ${{ inputs.target-value }}
+    - ${{ inputs.test-report-dir }}
+    - ${{ inputs.coverage-report-dir }}
     - ${{ inputs.input-dir }}
     - ${{ inputs.output-dir }}
