@@ -3,10 +3,10 @@ description: "QA Assistant Action for GitHub CI/CD"
 
 inputs:
   key:
-    description: 'model access key'
+    description: 'Qwen model access key'
     required: true
   action-name:
-    description: 'qa action'
+    description: 'QA Assistant action name'
     required: true
     default: 'INDEX' # INDEX/PLAN/JUNIT_UPDATE
   target-value:
@@ -14,19 +14,19 @@ inputs:
     required: true
     default: '80'
   test-report-dir:
-    description: 'path to test report files'
+    description: 'Path to test report files'
     required: true
     default: './target/surefire-reports/*.xml'
   coverage-report-dir:
-    description: 'path to coverage report files'
+    description: 'Path to coverage report files'
     required: true
     default: './target/site/jacoco/index.html'
   input-dir:
-    description: 'path to source files'
+    description: 'Path to source files'
     required: true
     default: './'
   output-dir:
-    description: 'path to output files'
+    description: 'Path to output files'
     required: true
     default: './'
 
