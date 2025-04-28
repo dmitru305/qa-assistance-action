@@ -1,5 +1,5 @@
-name: "Run QA Assistant"
-description: "Custom action using a private DockerHub image"
+name: "QA Assistant Action"
+description: "QA Assistant Action for GitHub CI/CD"
 
 inputs:
   key:
@@ -8,21 +8,21 @@ inputs:
   action-name:
     description: 'qa action'
     required: true
-    default: 'INDEX' # INDEX/PLAN/JUNIT
+    default: 'INDEX' # INDEX/PLAN/JUNIT_UPDATE
   target-value:
     description: 'Target value in percent'
     required: true
     default: '80'
   test-report-dir:
-    description: 'path to report files'
+    description: 'path to test report files'
     required: true
     default: './target/surefire-reports/*.xml'
   coverage-report-dir:
-    description: 'path to report files'
+    description: 'path to coverage report files'
     required: true
     default: './target/site/jacoco/index.html'
   input-dir:
-    description: 'path to input files'
+    description: 'path to source files'
     required: true
     default: './'
   output-dir:
