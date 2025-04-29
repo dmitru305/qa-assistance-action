@@ -32,7 +32,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://jacobsonius/qa-assistant:latest"
+  image: "docker://dmitru305/qa-assistant:latest"
   args:
     - ${{ inputs.key }}
     - ${{ inputs.action-name }}
